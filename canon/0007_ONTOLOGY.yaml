@@ -1,0 +1,450 @@
+# Arcturion Brain — Machine-Readable Ontology
+#
+# The single source of truth for the Brain's vocabulary and its axioms.
+# `engine/ontology.py` loads it; `engine/validator.py`'s PREDICATE_CANON and
+# RETIRED_PREDICATES must stay exactly equal to it — parity is test-enforced
+# (`engine/tests/test_ontology.py`), not derived; the type reasoner and
+# transitive-closure traversal engine read the axioms through the same loader.
+#
+# Editing rules
+#   - `predicates` must stay exactly equal to engine.validator.PREDICATE_CANON.
+#     engine/tests/test_ontology.py asserts this; a divergence is a test failure.
+#   - `inverse` must be symmetric (A.inverse=B implies B.inverse=A). Enforced at load.
+#   - Every node_type.family must appear in `families`. Enforced at load.
+#   - Assert `transitive`/`functional`/`disjoint` ONLY where canon/0006 is unambiguous
+#     AND the live graph shows zero violations. An unconstrained predicate is correct;
+#     a wrong axiom produces false inferences downstream.
+#   - Endpoint typing (domain/range) is NOT this file's layer. See the `predicates` note.
+version: 1
+generated_from:
+  - canon/0005_NODE_TAXONOMY.md
+  - canon/0006_RELATIONSHIP_TAXONOMY.md
+  - engine/validator.py
+  - index/brain.sqlite   # live type/family distribution + constraint verification (read-only)
+
+# ── Families ──────────────────────────────────────────────────────────────
+# Families include documented and previously observed types. Including data, contact,
+# and project lets Metric/Asset/Contact/Project map to their intended families.
+families:
+  - agent
+  - application
+  - automation
+  - capability
+  - code
+  - concept
+  - contact
+  - data
+  - document
+  - event
+  - external
+  - project
+
+# ── Node types ────────────────────────────────────────────────────────────
+# Every type in canon/0005, plus every type present in the live graph. Types that
+# exist in the graph but not in canon/0005 carry `undocumented: true` so enforcement
+# stays non-breaking while the drift stays visible to `python3 -m engine.ontology --audit`.
+#
+# Deliberately EXCLUDED as invalid (surfaced as defects by --audit):
+#   - the two unsubstituted template placeholder strings
+#     `<agent|founder|company|...>` and `<Pillar|Decision|Fact|...>`
+#   - the lowercase case-variant twins of documented types: `decision`, `event`,
+#     `capability`, `concept`, `skill`. A closed vocabulary must not contain
+#     both `Decision` and `decision`.
+node_types:
+  Agent:          {family: agent}
+  Application:    {family: application}
+  Asset:          {family: data}
+  Automation:     {family: automation}
+  Bookmark:       {family: external}
+  Capability:     {family: capability}
+  Channel:        {family: external}
+  Concept:        {family: document}
+  Config:         {family: code}
+  Constraint:     {family: document}
+  Contact:        {family: contact}
+  Decision:       {family: document}
+  Edit:           {family: event}
+  Endpoint:       {family: application}
+  Entity:         {family: concept}
+  Event:          {family: event}
+  Fact:           {family: document}
+  Handoff:        {family: event}
+  Hypothesis:     {family: document}
+  Metric:         {family: data}
+  Module:         {family: code}
+  Pattern:        {family: document}
+  Pillar:         {family: document}
+  Playbook:       {family: document}
+  Policy:         {family: document}
+  Preference:     {family: document}
+  Project:        {family: project}
+  Question:       {family: document}
+  Reflection:     {family: document}
+  Script:         {family: code}
+  Service:        {family: application}
+  Session:        {family: event}
+  Skill:          {family: application}
+  Source:         {family: document}
+  Task:           {family: event}
+  Workspace:      {family: agent}
+  # --- observed types absent from canon/0005 ---
+  Approval_gate:  {family: event, undocumented: true}
+  CLI_Tool:       {family: application, undocumented: true}
+  Company:        {family: document, undocumented: true}
+  Founder:        {family: document, undocumented: true}
+  Reminder:       {family: event, undocumented: true}
+  System:         {family: document, undocumented: true}
+  commandment:    {family: document, undocumented: true}
+
+# ── Predicates ────────────────────────────────────────────────────────────
+# Exactly the 82 predicates in engine.validator.PREDICATE_CANON.
+# Grouping mirrors that literal so the two stay diffable.
+#
+# transitive: asserted only on the four structural containment/ownership predicates.
+#   canon/0006 describes no other predicate as transitive, and a false transitive claim
+#   makes the closure engine emit edges that were never asserted.
+# functional: no axioms are asserted. The is_functional() API and
+#   ONT_FUNCTIONAL_VIOLATION check remain available for explicitly defined axioms.
+# domain/range: DELIBERATELY EMPTY HERE. Endpoint typing is NOT this file's layer —
+#   `engine/validator.py` -> DOMAIN_RANGE + SAME_FAMILY_PREDICATES is the authority, and
+#   canon/0006 ## Domain / Range documents it. That layer types on `nodes.family` and is
+#   derived from edges whose endpoints resolve. Duplicating it here would
+#   create two contradicting tables. The domain_of()/range_of() API stays (it returns an
+#   empty frozenset = unconstrained) so a future axiom needs no code change.
+predicates:
+  # Evidence
+  supports:
+    transitive: false
+    functional: false
+  contradicts:
+    transitive: false
+    functional: false
+  derived_from:
+    inverse: source_of
+    transitive: false
+    functional: false
+  cites:
+    inverse: cited_by
+    transitive: false
+    functional: false
+  measured_by:
+    transitive: false
+    functional: false
+  evidenced_by:
+    transitive: false
+    functional: false
+  source_of:
+    inverse: derived_from
+    transitive: false
+    functional: false
+  cited_by:
+    inverse: cites
+    transitive: false
+    functional: false
+  # Reasoning
+  depends_on:
+    inverse: depended_on_by
+    transitive: false
+    functional: false
+  implies:
+    transitive: false
+    functional: false
+  assumes:
+    transitive: false
+    functional: false
+  tests:
+    inverse: tested_by
+    transitive: false
+    functional: false
+  answers:
+    inverse: answered_by
+    transitive: false
+    functional: false
+  raises_question:
+    transitive: false
+    functional: false
+  depended_on_by:
+    inverse: depends_on
+    transitive: false
+    functional: false
+  answered_by:
+    inverse: answers
+    transitive: false
+    functional: false
+  tested_by:
+    inverse: tests
+    transitive: false
+    functional: false
+  # Lifecycle
+  supersedes:
+    inverse: superseded_by
+    transitive: false
+    functional: false
+  superseded_by:
+    inverse: supersedes
+    transitive: false
+    functional: false
+  preceded_by:
+    inverse: followed_by
+    transitive: false
+    functional: false
+  followed_by:
+    inverse: preceded_by
+    transitive: false
+    functional: false
+  revises:
+    transitive: false
+    functional: false
+  archived_to:
+    transitive: false
+    functional: false
+  promoted_from:
+    inverse: promoted_to
+    transitive: false
+    functional: false
+  promoted_to:
+    inverse: promoted_from
+    transitive: false
+    functional: false
+  # Structure
+  part_of:
+    inverse: contains
+    transitive: true
+    functional: false
+  contains:
+    inverse: part_of
+    transitive: true
+    functional: false
+  related_to:
+    inverse: related_to
+    transitive: false
+    functional: false
+  tagged_with:
+    transitive: false
+    functional: false
+  owned_by:
+    inverse: owns
+    transitive: true
+    functional: false
+  owns:
+    inverse: owned_by
+    transitive: true
+    functional: false
+  authored_by:
+    inverse: authored
+    transitive: false
+    functional: false
+  authored:
+    inverse: authored_by
+    transitive: false
+    functional: false
+  maintained_by:
+    inverse: maintains
+    transitive: false
+    functional: false
+  maintains:
+    inverse: maintained_by
+    transitive: false
+    functional: false
+  affects:
+    transitive: false
+    functional: false
+  # Operational
+  blocks:
+    transitive: false
+    functional: false
+  unblocks:
+    transitive: false
+    functional: false
+  routes_to:
+    transitive: false
+    functional: false
+  requires_approval_from:
+    transitive: false
+    functional: false
+  implemented_by:
+    transitive: false
+    functional: false
+  validated_by:
+    transitive: false
+    functional: false
+  # Self-improvement
+  learned_from:
+    transitive: false
+    functional: false
+  regressed_against:
+    transitive: false
+    functional: false
+  checked_by_eval:
+    transitive: false
+    functional: false
+  triggered_reflex:
+    transitive: false
+    functional: false
+  requires_refresh:
+    transitive: false
+    functional: false
+  # Code
+  imports:
+    inverse: imported_by
+    transitive: false
+    functional: false
+  imported_by:
+    inverse: imports
+    transitive: false
+    functional: false
+  calls:
+    inverse: called_by
+    transitive: false
+    functional: false
+  called_by:
+    inverse: calls
+    transitive: false
+    functional: false
+  executes:
+    inverse: executed_by
+    transitive: false
+    functional: false
+  executed_by:
+    inverse: executes
+    transitive: false
+    functional: false
+  configures:
+    inverse: configured_by
+    transitive: false
+    functional: false
+  configured_by:
+    inverse: configures
+    transitive: false
+    functional: false
+  # Runtime
+  runs_on:
+    inverse: hosts
+    transitive: false
+    functional: false
+  hosts:
+    inverse: runs_on
+    transitive: false
+    functional: false
+  installs:
+    inverse: installed_by
+    transitive: false
+    functional: false
+  installed_by:
+    inverse: installs
+    transitive: false
+    functional: false
+  exposes:
+    inverse: exposed_by
+    transitive: false
+    functional: false
+  exposed_by:
+    inverse: exposes
+    transitive: false
+    functional: false
+  # Semantic
+  semantically_similar_to:
+    inverse: semantically_similar_to
+    transitive: false
+    functional: false
+  co_occurs_with:
+    inverse: co_occurs_with
+    transitive: false
+    functional: false
+  instance_of:
+    inverse: class_of
+    transitive: false
+    functional: false
+  class_of:
+    inverse: instance_of
+    transitive: false
+    functional: false
+  synonymous_with:
+    inverse: synonymous_with
+    transitive: false
+    functional: false
+  # External
+  bookmarked_in:
+    inverse: contains_bookmark
+    transitive: false
+    functional: false
+  contains_bookmark:
+    inverse: bookmarked_in
+    transitive: false
+    functional: false
+  mentioned_in:
+    inverse: mentions
+    transitive: false
+    functional: false
+  mentions:
+    inverse: mentioned_in
+    transitive: false
+    functional: false
+  # Social
+  participates_in:
+    inverse: has_participant
+    transitive: false
+    functional: false
+  has_participant:
+    inverse: participates_in
+    transitive: false
+    functional: false
+  # Temporal / session
+  touched_by:
+    inverse: touches
+    transitive: false
+    functional: false
+  touches:
+    inverse: touched_by
+    transitive: false
+    functional: false
+  modified_by:
+    inverse: modifies
+    transitive: false
+    functional: false
+  modifies:
+    inverse: modified_by
+    transitive: false
+    functional: false
+  changed_in_session:
+    inverse: changed
+    transitive: false
+    functional: false
+  changed:
+    inverse: changed_in_session
+    transitive: false
+    functional: false
+  occurred_at:
+    inverse: time_of
+    transitive: false
+    functional: false
+  time_of:
+    inverse: occurred_at
+    transitive: false
+    functional: false
+  discussed_in:
+    inverse: discusses
+    transitive: false
+    functional: false
+  discusses:
+    inverse: discussed_in
+    transitive: false
+    functional: false
+
+# ── Retired predicates ────────────────────────────────────────────────────
+# Must stay exactly equal to engine.validator.RETIRED_PREDICATES.
+# Rationale + retirement dates live in canon/0006 ## Retired Predicates.
+retired_predicates:
+  - archived_to
+  - co_occurs_with
+  - regressed_against
+  - triggered_reflex
+
+# ── Disjointness axioms ───────────────────────────────────────────────────
+# INTENTIONALLY EMPTY. Declaring two families or types mutually exclusive is a
+# governance decision for the Founder, not an engineering one — it makes every node
+# holding both labels a standing violation. The machinery (`are_disjoint`,
+# `disjoint_sets`, ONT_DISJOINT_VIOLATION) ships and is tested against a fixture
+# ontology in engine/tests/test_ontology.py, so asserting an axiom later is a
+# one-line edit to this key with no code change.
+disjoint: []

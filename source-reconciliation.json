@@ -1,0 +1,781 @@
+{
+  "files": {
+    "brain_http_main.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "553bfc07aa65e54f8a1ee1d127fdabc09dd83444ac0c8e5d0a60b0a8f91dcbfa",
+      "source_sha256": "553bfc07aa65e54f8a1ee1d127fdabc09dd83444ac0c8e5d0a60b0a8f91dcbfa"
+    },
+    "canon/0007_ONTOLOGY.yaml": {
+      "adaptation": "Private observational comments removed; parsed vocabulary and axioms preserved.",
+      "candidate_sha256": "9d532c8985aec807f9d5795c0f560a1704257ee252d4cb29a85d979521148081",
+      "source_sha256": "2371cc4b76ec65d6ee9bc5d126ba3ca6dcba7eb4dc64583337ecda27d05de81b"
+    },
+    "canon/SCHEMA.md": {
+      "adaptation": "privacy and example adaptation",
+      "candidate_sha256": "a47a868c74f1a1f0203eb11c91f3013083a1c96fe9dfe62c27390b06b28b79ce",
+      "source_sha256": "3e87f651ed780b19fca0b1cd54bf9f1053121d2fc3f57be1d2f6aa18c35fcc23"
+    },
+    "engine/__init__.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "6893f792bdd3a4c79c5339df0d79875a568bb6411acc78b4c10faa423a13f658",
+      "source_sha256": "6893f792bdd3a4c79c5339df0d79875a568bb6411acc78b4c10faa423a13f658"
+    },
+    "engine/aliases.py": {
+      "adaptation": "configuration, portable command or documentation privacy adaptation",
+      "candidate_sha256": "6b5f816e7a797b4af55e62a0f5e93989bbdf7f8669c821574a525431205f59fe",
+      "source_sha256": "b1ce527219ecc1195428436d0b7a35ea19e81ed522a626cf44f8dc383ac4caf6"
+    },
+    "engine/brain.py": {
+      "adaptation": "configuration, portable command or documentation privacy adaptation",
+      "candidate_sha256": "c3d7abd1ffc6ce7fb7d7a634099ea42ddb108b066b6bb20d7bd8d121a50e9be6",
+      "source_sha256": "208352ac537db9c06db1cd054ee06530686c414e88e85ec2692ba94e1362b9cb"
+    },
+    "engine/capacity_admission.py": {
+      "adaptation": "work-root adaptation and documentation privacy editing",
+      "candidate_sha256": "baa7d18ecda59a6eb2c17b2cb17f2325d859eefd226d2992905c454f9764daf5",
+      "source_sha256": "dd7b42d869f165d7341fed4d162e19344a37190352814b8966f90832fb307c72"
+    },
+    "engine/change_feed.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "fa30a48424c1dfb038019a0bc5af54cffb954596a2714f3fa4acf2cac365ba47",
+      "source_sha256": "fa30a48424c1dfb038019a0bc5af54cffb954596a2714f3fa4acf2cac365ba47"
+    },
+    "engine/closure.py": {
+      "adaptation": "Private operational observations removed; executable logic preserved.",
+      "candidate_sha256": "8f4db74d4faf8ffaffac3599fae16eb42ea51531f284f698407792c56f194fca",
+      "source_sha256": "c1d2524b5f33ed92cd51f4ba633546ff9abc2bf59fe2ef7e9272584042a6acc8"
+    },
+    "engine/code_references.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "a9afec7e37a6bd1804f0cb622e11f19b3f5769c18e65b83c1782499bb3c9639b",
+      "source_sha256": "a9afec7e37a6bd1804f0cb622e11f19b3f5769c18e65b83c1782499bb3c9639b"
+    },
+    "engine/config.py": {
+      "adaptation": "Explicit work root and caller-owned sensitive policy; shipped ontology default; private deployment observations removed.",
+      "candidate_sha256": "857a1d1740407f7f1b98ad41e8431568533651ce6e7f64b255063adbfa2b9a8d",
+      "source_sha256": "51b1597e8f3df70955408a9a4517cbafcce7df07be88b2b6963742eb72d0d08b"
+    },
+    "engine/coverage_check.py": {
+      "adaptation": "configuration, portable command or documentation privacy adaptation",
+      "candidate_sha256": "87d7ece043d8e3ea132dc375bb13511496e05f81475b14e5ab8aadaf2b7cd54e",
+      "source_sha256": "7791c1a7a567ca171bef3070e12cdb9c91bbc0b6af625ddbc94aaa3b981da9b2"
+    },
+    "engine/db.py": {
+      "adaptation": "configuration, portable command or documentation privacy adaptation",
+      "candidate_sha256": "d87c94ae454352c2c34a0279f6a4975bb3e5c564ca7b64cf3a4ab6227780bddc",
+      "source_sha256": "f717f09d571470928fbb0714efb49a1e79d8f7e6736c44421a135381163c4c31"
+    },
+    "engine/edge_inference.py": {
+      "adaptation": "Private operational observations removed; executable logic preserved.",
+      "candidate_sha256": "f4f2a1a19274f7a42fbb54d6d0345c642d2093e8fa4e05d2f02552ef90adf686",
+      "source_sha256": "0373aaae2b9e3b93d1fd00e51f2589621b5029483a8e87c0e2371282c19bb653"
+    },
+    "engine/embedder.py": {
+      "adaptation": "optional dependency and local model adaptation",
+      "candidate_sha256": "b2a61a68adb1d2be5cf38e92ec28ae3bafddb4aa2aded82bb45ec1107ec4b168",
+      "source_sha256": "9048d8c26d93842c583fad0cba2e02b71276d61d503533a1a4c8ba01a13247e1"
+    },
+    "engine/enforcement.py": {
+      "adaptation": "configuration, portable command or documentation privacy adaptation",
+      "candidate_sha256": "170cf1bfbfd2bba74846fa68195e532d8af2d43823fb06b1d7789ede9612edd3",
+      "source_sha256": "5c7dd473c43fdadd28c4ff764c17c27b694a6efcf9af5433fa50c6a60b4db93b"
+    },
+    "engine/evidence_fields.py": {
+      "adaptation": "External answer judging and asynchronous dispatch disabled by default; explicit opt-in retained.",
+      "candidate_sha256": "10fda538d6bb21765c4ab4e2ffd335f01c5a54ff337f160160e06ee467a008c3",
+      "source_sha256": "419636d614d0fc5eef5578d1e5ae58f08d44fa32b0934e16855b73e45ab4cb1e"
+    },
+    "engine/extractors/__init__.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "8aeba2e295aa55881afb8c93dbb95530f10b6fde9ae784ba42a02d74b9ed1ee5",
+      "source_sha256": "8aeba2e295aa55881afb8c93dbb95530f10b6fde9ae784ba42a02d74b9ed1ee5"
+    },
+    "engine/extractors/code.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "3ecaf7da20d36037a3c1161baa341b7767c5803be791a082d439caea0888a7ee",
+      "source_sha256": "3ecaf7da20d36037a3c1161baa341b7767c5803be791a082d439caea0888a7ee"
+    },
+    "engine/extractors/config_file.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "52838ffb2a56a02db564cccf36c7ebbbdc9d659c33cd3c8359d2ebd473d0e282",
+      "source_sha256": "52838ffb2a56a02db564cccf36c7ebbbdc9d659c33cd3c8359d2ebd473d0e282"
+    },
+    "engine/extractors/markdown.py": {
+      "adaptation": "work-root adaptation and documentation privacy editing",
+      "candidate_sha256": "b00ec16db26aa5e1a722fe7886aa680dc89745c79788a5da0350d40a7e6db0c3",
+      "source_sha256": "2702acff8a5c3d4721044fcc0294d8a5e585a38c3778524235eb1d14abfe89f4"
+    },
+    "engine/extractors/plist.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "c62939ccee6859ad093093aae52fc50ef182ff5f09b6dd029b1c5890648c98aa",
+      "source_sha256": "c62939ccee6859ad093093aae52fc50ef182ff5f09b6dd029b1c5890648c98aa"
+    },
+    "engine/graph_builder.py": {
+      "adaptation": "configuration, portable command or documentation privacy adaptation",
+      "candidate_sha256": "9c74dff29f25a3ca4061267bb1ba0412fc55f5d68034fedf5813ec1f49feb47b",
+      "source_sha256": "72c39837672267446fc4b3af6feebe39ebc2b4d9cb37be4d32eeadc99bfb5283"
+    },
+    "engine/graph_viewer/index.html": {
+      "adaptation": "Exact browser-library versions and subresource-integrity hashes; no viewer runtime qualification.",
+      "candidate_sha256": "e9c40ff76f92528f11570623d252df67d8d3707f7d27145cea2eab8d13551a18",
+      "source_sha256": "4f33ac2ed0b9a61993305a54838d55510b1a0d2191d57dc87b47b14e6a65395d"
+    },
+    "engine/graph_viewer/viewer.js": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "2f37e6c1c7ca603baeb0ef0717c7da52893caa5b03498c562aab328cd782ab1f",
+      "source_sha256": "2f37e6c1c7ca603baeb0ef0717c7da52893caa5b03498c562aab328cd782ab1f"
+    },
+    "engine/harvesters/__init__.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "de078645e9ae81b2026a0c654dc0cc2dce6fca159ad4275f31103480282e3e56",
+      "source_sha256": "de078645e9ae81b2026a0c654dc0cc2dce6fca159ad4275f31103480282e3e56"
+    },
+    "engine/harvesters/agents.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "a6dda31f850791c911759d04064f5a22f1fc0b557818f5861e0f4bf86b795130",
+      "source_sha256": "a6dda31f850791c911759d04064f5a22f1fc0b557818f5861e0f4bf86b795130"
+    },
+    "engine/harvesters/applications.py": {
+      "adaptation": "configuration, portable command or documentation privacy adaptation",
+      "candidate_sha256": "bbad2550fde9829456f00485dbe580742aa34a030213d635def48b3fb919342d",
+      "source_sha256": "329f90bce9bfe7d3dd582eb6226ae9aa616fcefa6f983e4726d37f6e0176eb41"
+    },
+    "engine/harvesters/concepts.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "210ef82d13eafc53ed659d6fc5f19d8382ae5d79f258d7d81918df6609a8b610",
+      "source_sha256": "210ef82d13eafc53ed659d6fc5f19d8382ae5d79f258d7d81918df6609a8b610"
+    },
+    "engine/harvesters/events.py": {
+      "adaptation": "configuration, portable command or documentation privacy adaptation",
+      "candidate_sha256": "86638ca2760ba2a1b89964928e834d7959aed6c29c1eeb9cd3c12eec5eae3c01",
+      "source_sha256": "9f7fcd163b709a44e37f4cde5810916b4b0e6bf31a69bd6b1cfa728fcf7d6de2"
+    },
+    "engine/harvesters/external.py": {
+      "adaptation": "work-root adaptation and documentation privacy editing",
+      "candidate_sha256": "d3d332be3276607494feac74f9b6b4cd6d527ad38021e4264980b0011877d19c",
+      "source_sha256": "2e9ea85eef6b660e00daed6cfc8742e9acce6971b4aafae7eb2e030e00c7d143"
+    },
+    "engine/harvesters/llm_edges.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "458e64a60316df375c01896eea627a693630c385e95703a8795391d7416106a5",
+      "source_sha256": "458e64a60316df375c01896eea627a693630c385e95703a8795391d7416106a5"
+    },
+    "engine/harvesters/mcp_client.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "413ae1b207fd55eac011e4cda54ad07071793350ba410e1b7bb685954dceda19",
+      "source_sha256": "413ae1b207fd55eac011e4cda54ad07071793350ba410e1b7bb685954dceda19"
+    },
+    "engine/harvesters/run_all.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "437c572849b3813f099fd186006a70fe888cb422d37ce86af5d82031f6f6a6b2",
+      "source_sha256": "437c572849b3813f099fd186006a70fe888cb422d37ce86af5d82031f6f6a6b2"
+    },
+    "engine/harvesters/sessions.py": {
+      "adaptation": "configuration, portable command or documentation privacy adaptation",
+      "candidate_sha256": "e574c45cce5ee42c9a9a003a2e85e3a242402a220031660f8d18ef374bcdcd5d",
+      "source_sha256": "8c8c6cec01c00d0a57495879bdf31675838fc2ef5fbf27044042c25e79adb653"
+    },
+    "engine/http_server.py": {
+      "adaptation": "configuration, portable command or documentation privacy adaptation",
+      "candidate_sha256": "1a43b2dcc02d649ee17ebdfcd06683c500737997aaaf2fc82ca24d0e865427a6",
+      "source_sha256": "fd97f258b7f46b07c9e17daec8d1af750cbffa45894224361f13d91b8395b728"
+    },
+    "engine/ingest.py": {
+      "adaptation": "work-root adaptation and documentation privacy editing",
+      "candidate_sha256": "66380f0624e14f1ff4031e44ae19e727d4291fb469a87d38a5aa6f8cfb590a73",
+      "source_sha256": "51083cb53d9328ef2c3e9f55dc3cdf7f0a7ec76250ce287e24d20352b62e1874"
+    },
+    "engine/inverse.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "8ab5f3d8f418ae6a34670fd7e603f4674e57f9699e9ac73c45d8a29f9e760dfa",
+      "source_sha256": "8ab5f3d8f418ae6a34670fd7e603f4674e57f9699e9ac73c45d8a29f9e760dfa"
+    },
+    "engine/journals.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "e773590d8c451afbf2551eebe7ab0fe8b21e8a132bf419c09c58daff1948afe0",
+      "source_sha256": "e773590d8c451afbf2551eebe7ab0fe8b21e8a132bf419c09c58daff1948afe0"
+    },
+    "engine/jsonl_writer.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "ea4d38102cc573b977bd75d63bf396c6a45cbc0781595c75bbfdfb3954672394",
+      "source_sha256": "ea4d38102cc573b977bd75d63bf396c6a45cbc0781595c75bbfdfb3954672394"
+    },
+    "engine/judge.py": {
+      "adaptation": "Provider executable requires an explicit absolute setting; workstation discovery removed.",
+      "candidate_sha256": "ba95ea1d943b5c225fb9b252ac9c6a6903d6178d81c9d03592b7a5af07079ae1",
+      "source_sha256": "1a92a61a493e8ba94a05d55553a0484c1ec885edb4735babaa056567deb4888a"
+    },
+    "engine/maintenance/__init__.py": {
+      "adaptation": "configuration, portable command or documentation privacy adaptation",
+      "candidate_sha256": "4adea5d6a29cc4d0e250f7c7aadeda2ea4c783a7b09581fae0b0e94c5f8e258f",
+      "source_sha256": "1ae05ae7686ccadd31d2979b2a95a8b3d9a5ba18f464b01d983c421fdc8c8008"
+    },
+    "engine/maintenance/apply_staged_proposals.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "1352b57b7468c61110f48f71a55bf73067225e1fb83584f5822be78aba99f28d",
+      "source_sha256": "1352b57b7468c61110f48f71a55bf73067225e1fb83584f5822be78aba99f28d"
+    },
+    "engine/maintenance/cleanup4.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "9849a077e9f158b78fb639de67e9ff0de5ecefb94d3c0a5ddedbe1067788a980",
+      "source_sha256": "9849a077e9f158b78fb639de67e9ff0de5ecefb94d3c0a5ddedbe1067788a980"
+    },
+    "engine/maintenance/compactor.py": {
+      "adaptation": "configuration, portable command or documentation privacy adaptation",
+      "candidate_sha256": "cb7503666ca535903e259321b7b6032181da9bb41e1c32ed57c39512a8079b4d",
+      "source_sha256": "09ae4c75fd2828f00746e7889b859fc2a731b4ee98f104583aea3d2a6ac91158"
+    },
+    "engine/maintenance/content_dedup.py": {
+      "adaptation": "work-root adaptation and documentation privacy editing",
+      "candidate_sha256": "25a196a0edf9f105bbf57ec55bd1d99ab55e693460baa2a2e285136290d998e9",
+      "source_sha256": "1689bd2aca291dbf29a723efeff5d7622de4b35753dc18b642db02d634c9f09a"
+    },
+    "engine/maintenance/domain_range_audit.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "f77c9d2dfa4ca7183a6b021a9dfc32079c1c5dcff9e539b8ab37fb0e76c422ac",
+      "source_sha256": "f77c9d2dfa4ca7183a6b021a9dfc32079c1c5dcff9e539b8ab37fb0e76c422ac"
+    },
+    "engine/maintenance/edge_endpoint_resolve.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "d68bd069ddbea1dc09050944d0eb7d29fe6053ad906d9fb8cfd400262d97a1b2",
+      "source_sha256": "d68bd069ddbea1dc09050944d0eb7d29fe6053ad906d9fb8cfd400262d97a1b2"
+    },
+    "engine/maintenance/entity_dedup.py": {
+      "adaptation": "optional dependency and local model adaptation",
+      "candidate_sha256": "902269b2f247d9af4f0cb46b24bdca49b955d9eba3dbbaed1e0f3143b00854da",
+      "source_sha256": "e5d872a31428bf4f9997373474d9ba85b01b8fc30f7aedbc92e81cd16087d578"
+    },
+    "engine/maintenance/gravity.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "766389f3b85f62a262bacace94b3f6abbe95dd6a73eebe641c39108d29e569d9",
+      "source_sha256": "766389f3b85f62a262bacace94b3f6abbe95dd6a73eebe641c39108d29e569d9"
+    },
+    "engine/maintenance/metadata_backfill.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "2ba492bb959a36545f62bc2e57ab49b174254b20f123f52677657c1f8be00194",
+      "source_sha256": "2ba492bb959a36545f62bc2e57ab49b174254b20f123f52677657c1f8be00194"
+    },
+    "engine/maintenance/predicate_audit.py": {
+      "adaptation": "configuration, portable command or documentation privacy adaptation",
+      "candidate_sha256": "9c752ed4dc16a1b0cfbe5dab1ec371a985dc6f2c69d48515857489929bc9d7fa",
+      "source_sha256": "1db27390327afae53cf50d4f467e1bea6d3396d93eb3b435c96c3f8ed43d8213"
+    },
+    "engine/maintenance/privacy_export.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "8dcbc5f7c934dbb94d732a97d3dd1a7b3ae2b8c0cca7191246e1da19344aba6e",
+      "source_sha256": "8dcbc5f7c934dbb94d732a97d3dd1a7b3ae2b8c0cca7191246e1da19344aba6e"
+    },
+    "engine/maintenance/prong_backfill.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "1a02c503356020733c2ae7fbb6364240a71d1534273cdaf12db020be69780761",
+      "source_sha256": "1a02c503356020733c2ae7fbb6364240a71d1534273cdaf12db020be69780761"
+    },
+    "engine/maintenance/reciprocity_pass.py": {
+      "adaptation": "configuration, portable command or documentation privacy adaptation",
+      "candidate_sha256": "51884f56352f5bd37e007809b2ec8473a1dfc217502fbbd228c2bea8fc7658e4",
+      "source_sha256": "449e15db4f082027546d75567a199e1239df3d3a3ed5a9e5322c91c288c4c545"
+    },
+    "engine/maintenance/semantic_repair.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "395dd7fda2305d615790ed35941a34e804177dc7cfb3e520c80f24bca96ce5a0",
+      "source_sha256": "395dd7fda2305d615790ed35941a34e804177dc7cfb3e520c80f24bca96ce5a0"
+    },
+    "engine/maintenance/skiplist_gc.py": {
+      "adaptation": "Private operational observations removed; executable logic preserved.",
+      "candidate_sha256": "485d870a6641ccbc3780da1adaa27f526cdf4c48ca956db5f907bd036ee9b1d6",
+      "source_sha256": "03cc305b1f37a976b94f8124d14133ab59ce60d272e85a5b53122d63d012c9bf"
+    },
+    "engine/maintenance/targeted_authority.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "1e31567082c3eb276c231bf56fed7af1c6779747231c0145ce315bac798f5bd4",
+      "source_sha256": "1e31567082c3eb276c231bf56fed7af1c6779747231c0145ce315bac798f5bd4"
+    },
+    "engine/maintenance/universe_remediation.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "bf0e4f573f51a0113f668d688854d2bbb1581c4e59af3845e88906a9370a7fd0",
+      "source_sha256": "bf0e4f573f51a0113f668d688854d2bbb1581c4e59af3845e88906a9370a7fd0"
+    },
+    "engine/maintenance/validity_pass.py": {
+      "adaptation": "Private operational observations removed; executable logic preserved.",
+      "candidate_sha256": "c62755a81c0bf1944569af41931f4f736a009ddec3a52a4d1bc86b576214b4e9",
+      "source_sha256": "a9856a1df251cbb6e894ffe9aea3040bd7c62240759e9b4249991db6db3d8714"
+    },
+    "engine/maintenance/walkable_predicates.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "b20418d3152f6ddebe22abed73b739990838db18e977b589e86f4db239e36954",
+      "source_sha256": "b20418d3152f6ddebe22abed73b739990838db18e977b589e86f4db239e36954"
+    },
+    "engine/mcp_server.py": {
+      "adaptation": "configuration, portable command or documentation privacy adaptation",
+      "candidate_sha256": "37f40c04ffd223a80bedd74661e5c61c64b088b69c958638cea25857cb5dd402",
+      "source_sha256": "fc9db1e8316a2de1eb29320f6eea21278ae54274b18203f0a232f3ab728841a1"
+    },
+    "engine/memory_policy.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "066853dc9512aa9358f74da14102489f552705f59906869409b7026b8cb539b0",
+      "source_sha256": "066853dc9512aa9358f74da14102489f552705f59906869409b7026b8cb539b0"
+    },
+    "engine/metrics.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "ec244ebde7b2bf4c252aa3466a9e26c473f60a006f862368bfca559368ef1bbc",
+      "source_sha256": "ec244ebde7b2bf4c252aa3466a9e26c473f60a006f862368bfca559368ef1bbc"
+    },
+    "engine/ner.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "74d811be3b31809ef71ff234cdc1f761fae82fa4c3a8e1c45a293539b3866033",
+      "source_sha256": "74d811be3b31809ef71ff234cdc1f761fae82fa4c3a8e1c45a293539b3866033"
+    },
+    "engine/ontology.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "31ab7de7a25d0419e43ef00431f91042bae638d1814c9d2e7335b99b686584f5",
+      "source_sha256": "31ab7de7a25d0419e43ef00431f91042bae638d1814c9d2e7335b99b686584f5"
+    },
+    "engine/operating_inventory.py": {
+      "adaptation": "work-root adaptation and documentation privacy editing",
+      "candidate_sha256": "234401062cff7e438461a60579d1ac7de9bfac5d6988eca9d1af3bafb65465ce",
+      "source_sha256": "12f959721841678b9ac4654422b89e8c2d8c29cdfc399f5113d10c3b7e514ee7"
+    },
+    "engine/pagerank.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "a665f90c6214fe8476fee5fb81be741309d5983419f09f13774b68cc599fcdec",
+      "source_sha256": "a665f90c6214fe8476fee5fb81be741309d5983419f09f13774b68cc599fcdec"
+    },
+    "engine/path_edges.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "4718e03dd4fd14860ca3bc16b31e6061a08ec90aa0128d211565f2637dc8bf99",
+      "source_sha256": "4718e03dd4fd14860ca3bc16b31e6061a08ec90aa0128d211565f2637dc8bf99"
+    },
+    "engine/rank_signals.py": {
+      "adaptation": "Private operational observations removed; executable logic preserved.",
+      "candidate_sha256": "6e2704e2be773bcdefab85da57215f17faae675968b505ab95a4ddc994a0a629",
+      "source_sha256": "fd807f0400256578e46aa389c8d73b8e7c488981d0c15ad6e2d893f53a302bbb"
+    },
+    "engine/reasoner.py": {
+      "adaptation": "configuration, portable command or documentation privacy adaptation",
+      "candidate_sha256": "fcff0b91f999a6f7bf5c463479da51864ff2ed0734b678d79d3f8ded4f40653e",
+      "source_sha256": "3e754c455fecfdc34f7ffece10815e047a6277d75fbd0a81b014d2ebb1f1dec6"
+    },
+    "engine/registry_harvester.py": {
+      "adaptation": "work-root adaptation and documentation privacy editing",
+      "candidate_sha256": "269d5dfcc7e7049094d9ee2038ea8e80613663fab6ed199a39c0e63c0bc9f053",
+      "source_sha256": "e22ed45accaa61808372631281cafb830d0691138f6aebe02a5b844d04bb9ccd"
+    },
+    "engine/reindex.py": {
+      "adaptation": "Current upstream overlapping-reindex detection preserved; work-root configuration and private operational narrative editing.",
+      "candidate_sha256": "cdc6df635a961d779ed6320ab1249462bfc86aae47db3be595bcdedee7ab562b",
+      "source_sha256": "e75737f4f6665fdc04d0f1bee3dca9f12fab041fef4126e1566e55704e965362"
+    },
+    "engine/reports.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "9906ebd35e1f4aba3849d968e0c30a8faf857691f444d030951d7dbc0aaa27ec",
+      "source_sha256": "9906ebd35e1f4aba3849d968e0c30a8faf857691f444d030951d7dbc0aaa27ec"
+    },
+    "engine/resolver.py": {
+      "adaptation": "Private operational observations removed; executable logic preserved.",
+      "candidate_sha256": "1c29fd00ca709dce1d7f4dbaae141169f00d3d9d13156ab7f8dc356a478e831d",
+      "source_sha256": "9ac86e6f358505debf41cd9b2bd9e92873e4851f807c12a00885da3f068a9bb0"
+    },
+    "engine/retrieval_eval.py": {
+      "adaptation": "configuration, portable command or documentation privacy adaptation",
+      "candidate_sha256": "8ccf7ab493a3cd4c96a3164176c58173f63d1a8c3c83ef458ecc3f23c752012b",
+      "source_sha256": "0bc5281ce9fc37995151545ec416e09a09f422b794eea0d42d24f6e7e41f9760"
+    },
+    "engine/semantic_verde.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "4da74d728843808a4222ae380356170e126d6e52005f85c7ef0d8cb5800f0974",
+      "source_sha256": "4da74d728843808a4222ae380356170e126d6e52005f85c7ef0d8cb5800f0974"
+    },
+    "engine/source_integrity.py": {
+      "adaptation": "Caller-owned exclusion policy and protected roots; literal stored-path aliases; current upstream topic-scan optimization preserved.",
+      "candidate_sha256": "483140d3261ed395face2a40ebe7a2e9b0c6f82f7fa11ff4daa9b400cb3d1598",
+      "source_sha256": "4c300bdd0a889388856bd6e13c9679dfa29b7ad9a870bf245f5b0d50edfb5c5c"
+    },
+    "engine/telemetry.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "d6a11105c6770517b973ee669aea794e516b5fd5b73e76fa2092a68551458df5",
+      "source_sha256": "d6a11105c6770517b973ee669aea794e516b5fd5b73e76fa2092a68551458df5"
+    },
+    "engine/tests/__init__.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "engine/tests/test_admission_gate.py": {
+      "adaptation": "Synthetic privacy fixtures and configuration regression adaptations.",
+      "candidate_sha256": "33c92d629f47107c5c12950c5740d6b90fd7d1a7a9e6004795e047cbc6e85a85",
+      "source_sha256": "0c3eecf0a50455fc3b63fff2f1a3f085e4b04e93ea73d1fa75685fc620f05990"
+    },
+    "engine/tests/test_blindspot_closure.py": {
+      "adaptation": "Synthetic privacy fixtures and configuration regression adaptations.",
+      "candidate_sha256": "ce54121bb86e3d8f98d4c3d2bc5b704d14875af6ee44da999637a9be5c03981c",
+      "source_sha256": "66f0ed5823a43c2b5cb5807a1a508486947451a98cd3b5c1e3d586f279ece75d"
+    },
+    "engine/tests/test_brain_answer_quality.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "db0e478ec006ad6f1155deaf19f9841a2ce050e7ad9b621927353577abc9b124",
+      "source_sha256": "db0e478ec006ad6f1155deaf19f9841a2ce050e7ad9b621927353577abc9b124"
+    },
+    "engine/tests/test_brain_gravity.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "e2cf07daa9379e7e2a71438ab37a870e8f2f8f4a2ac1e66ce5c7b5bd3d30c7a2",
+      "source_sha256": "e2cf07daa9379e7e2a71438ab37a870e8f2f8f4a2ac1e66ce5c7b5bd3d30c7a2"
+    },
+    "engine/tests/test_brain_query.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "aaf7dc0e9afa2747c079e83d1db5b0b105cc8606ae638178011dd247aa1b4b04",
+      "source_sha256": "aaf7dc0e9afa2747c079e83d1db5b0b105cc8606ae638178011dd247aa1b4b04"
+    },
+    "engine/tests/test_capability_registry.py": {
+      "adaptation": "Synthetic privacy fixtures and configuration regression adaptations.",
+      "candidate_sha256": "8bd119919a8a757d9823ee9a7149fbf9c18a020d307daab4dbec55d4cfb15d97",
+      "source_sha256": "1ecfae525bf947c9ee1273777f7de1593410d3356718862458075b8462ab2d4c"
+    },
+    "engine/tests/test_capacity_integration.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "8fe54176c749715b058e35ce8485afda98eaec05de0ebabb47df6fccaeb39f5e",
+      "source_sha256": "8fe54176c749715b058e35ce8485afda98eaec05de0ebabb47df6fccaeb39f5e"
+    },
+    "engine/tests/test_change_feed.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "3f6de7ceb45b4ec30918783293e9e483b45634a1e0a87354629575c54f4487c2",
+      "source_sha256": "3f6de7ceb45b4ec30918783293e9e483b45634a1e0a87354629575c54f4487c2"
+    },
+    "engine/tests/test_change_feed_http.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "3733b2a7b50ee35bc3dd3f0bf7f490226728b6bd151fafe189d1933880b0ab34",
+      "source_sha256": "3733b2a7b50ee35bc3dd3f0bf7f490226728b6bd151fafe189d1933880b0ab34"
+    },
+    "engine/tests/test_cleanup4.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "6d490615868b4bac965c2173bf7ab2f621a3ef8034d9d289e12fef84e6a9aa0a",
+      "source_sha256": "6d490615868b4bac965c2173bf7ab2f621a3ef8034d9d289e12fef84e6a9aa0a"
+    },
+    "engine/tests/test_closure.py": {
+      "adaptation": "Synthetic privacy fixtures and configuration regression adaptations.",
+      "candidate_sha256": "c879fa0afa62855d1973ef1d92168e6eca4449c0fb7253b44e82f19ad4ce08e4",
+      "source_sha256": "197e0e15e4193b7fd6fe603dbec652911661e292f1d51c0c9dbf3ce479ba6f00"
+    },
+    "engine/tests/test_config_hardening.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "245671923a80c7c213d225dc76c656043f44251ec0e1e408bd75cb34ca81b8c1",
+      "source_sha256": "245671923a80c7c213d225dc76c656043f44251ec0e1e408bd75cb34ca81b8c1"
+    },
+    "engine/tests/test_content_dedup.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "c2f85b56b819ec1a007efc94e389300e0febe651d779701de934aea5f422997c",
+      "source_sha256": "c2f85b56b819ec1a007efc94e389300e0febe651d779701de934aea5f422997c"
+    },
+    "engine/tests/test_contextual_prefix.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "d4c55003e04d07034aa98b0c9379b979c93deb3ec8926eb8260491c5305796b2",
+      "source_sha256": "d4c55003e04d07034aa98b0c9379b979c93deb3ec8926eb8260491c5305796b2"
+    },
+    "engine/tests/test_edge_admission_quarantine.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "2547707c1174cc981fb9e3d2c8b551f2866f1cb2b5921e9a1aa4adc00c739c00",
+      "source_sha256": "2547707c1174cc981fb9e3d2c8b551f2866f1cb2b5921e9a1aa4adc00c739c00"
+    },
+    "engine/tests/test_edge_endpoint_resolve.py": {
+      "adaptation": "Synthetic privacy fixtures and configuration regression adaptations.",
+      "candidate_sha256": "0064cef519019bb28b7e45900d759f36ed1cca7f4de3c089395cedbd2b0caea1",
+      "source_sha256": "2d52117a9a0b1ac28f13bc19e3835bd77333fa459b93a4d7f54e9342ace63795"
+    },
+    "engine/tests/test_edge_health.py": {
+      "adaptation": "Synthetic privacy fixtures and configuration regression adaptations.",
+      "candidate_sha256": "4b84a17e5dd7f146801da413391dfa8f1a9a1c1b2f851041a4783e0760daef58",
+      "source_sha256": "de4cb162200b6428aa31fc5f1a10d14dd6b7d622bb55a6bbc8567e0bca064f8c"
+    },
+    "engine/tests/test_enforcement.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "6839c4c471c5f5c99613aeab9073763a4ddfa160d33034f61d35fdbd289c8309",
+      "source_sha256": "6839c4c471c5f5c99613aeab9073763a4ddfa160d33034f61d35fdbd289c8309"
+    },
+    "engine/tests/test_exclusion_chokepoint.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "92f87242eb2b0920652ba0e1898b77a10239d9d51a97af21729e7cef775c85ac",
+      "source_sha256": "92f87242eb2b0920652ba0e1898b77a10239d9d51a97af21729e7cef775c85ac"
+    },
+    "engine/tests/test_extractor_description_fallback.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "2705df125c3c35749301f8b45a70240a99aa67202256695fd8d892144994488d",
+      "source_sha256": "2705df125c3c35749301f8b45a70240a99aa67202256695fd8d892144994488d"
+    },
+    "engine/tests/test_frontmatter_owner_resolution.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "1b3415fa0498f0f7f7da203678d413e7d8b646cd3f9484da2693c55b4d799400",
+      "source_sha256": "1b3415fa0498f0f7f7da203678d413e7d8b646cd3f9484da2693c55b4d799400"
+    },
+    "engine/tests/test_graph_builder_semantic_order.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "47f4aa4520583f28253fee6f3ad778f322d5d07ea61cb17d23fcc3d248baa829",
+      "source_sha256": "47f4aa4520583f28253fee6f3ad778f322d5d07ea61cb17d23fcc3d248baa829"
+    },
+    "engine/tests/test_gravity_runtime_root.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "abd714b43f8d5a04a1caee145adc7585372fec58edee893e9e4ebb23e9a1744e",
+      "source_sha256": "abd714b43f8d5a04a1caee145adc7585372fec58edee893e9e4ebb23e9a1744e"
+    },
+    "engine/tests/test_health_refresh.py": {
+      "adaptation": "Synthetic privacy fixtures and configuration regression adaptations.",
+      "candidate_sha256": "95ac6702f334c16e96b9eeeba3991b3702af421fba691b3ae7856da9d2f207a2",
+      "source_sha256": "1933a893f00ec68d591904d9e73afd2a517aa836160d8cec6b54db42372a373f"
+    },
+    "engine/tests/test_idf_lexical_scoring.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "029390603b75b5bd16611ca9813f643152f506685f437deada4b655c2f5a76c0",
+      "source_sha256": "029390603b75b5bd16611ca9813f643152f506685f437deada4b655c2f5a76c0"
+    },
+    "engine/tests/test_ingest_vega_lock_scope.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "3fa676e94ec31b20c63ecbac67133da9f2d877b5924f69eace8888ebbf1e040f",
+      "source_sha256": "3fa676e94ec31b20c63ecbac67133da9f2d877b5924f69eace8888ebbf1e040f"
+    },
+    "engine/tests/test_lexical_floor_rare_mass.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "789e9214003a266a4f855ac33fe8c99ffb3c5a6afceed00497cc86363c6f9838",
+      "source_sha256": "789e9214003a266a4f855ac33fe8c99ffb3c5a6afceed00497cc86363c6f9838"
+    },
+    "engine/tests/test_live_brain_journals.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "c7c8c61a769494497f65104def8d64055370cbf69a08b25566abdad469b0975e",
+      "source_sha256": "c7c8c61a769494497f65104def8d64055370cbf69a08b25566abdad469b0975e"
+    },
+    "engine/tests/test_mcp_arg_normalization.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "058d5e26641773418ac359061a956c536412664cef8d7a5c246099f9d3ffb19e",
+      "source_sha256": "058d5e26641773418ac359061a956c536412664cef8d7a5c246099f9d3ffb19e"
+    },
+    "engine/tests/test_missing_path_gc.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "6b65d38632a321b6f4d2a3d0faee7efd6846ae8585aec5184892501210e38206",
+      "source_sha256": "6b65d38632a321b6f4d2a3d0faee7efd6846ae8585aec5184892501210e38206"
+    },
+    "engine/tests/test_modernization_package1.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "bb9eaafb2b15ef7d57abba06155783ee48290e3ad9e3d3bd5d7f090d45b695e8",
+      "source_sha256": "bb9eaafb2b15ef7d57abba06155783ee48290e3ad9e3d3bd5d7f090d45b695e8"
+    },
+    "engine/tests/test_modernization_package2.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "9fd0152e950bba1c9043194e3335e746dac98eb5bac358a37888c96c9325ca8c",
+      "source_sha256": "9fd0152e950bba1c9043194e3335e746dac98eb5bac358a37888c96c9325ca8c"
+    },
+    "engine/tests/test_modernization_package3.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "294b026cbea43ebc0600c38610778f612b37ff1ca6af435006f12e480da188f2",
+      "source_sha256": "294b026cbea43ebc0600c38610778f612b37ff1ca6af435006f12e480da188f2"
+    },
+    "engine/tests/test_modernization_package4.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "570bf43905f2c14d6757e6460532594b9139660ed721e6c757d8b936fa90ebc0",
+      "source_sha256": "570bf43905f2c14d6757e6460532594b9139660ed721e6c757d8b936fa90ebc0"
+    },
+    "engine/tests/test_ontology.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "47cb1dacbd090d86ff02b9db8cbaccb9a02bbfd034c6616246bd1ee82eaa313e",
+      "source_sha256": "47cb1dacbd090d86ff02b9db8cbaccb9a02bbfd034c6616246bd1ee82eaa313e"
+    },
+    "engine/tests/test_owner_placeholder_edges.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "e9c3605dfba203543765db0f0dd4a9897e475726ac99f8fdf7ae94877c183573",
+      "source_sha256": "e9c3605dfba203543765db0f0dd4a9897e475726ac99f8fdf7ae94877c183573"
+    },
+    "engine/tests/test_pack_content.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "88a41d3b9a871ede77f8a44de0052e8078d69184049041dbc4be74da6b125145",
+      "source_sha256": "88a41d3b9a871ede77f8a44de0052e8078d69184049041dbc4be74da6b125145"
+    },
+    "engine/tests/test_plist_metadata.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "fc0c69b302640f6da6d99e03a7e265dbcff0809c6657f399fd94945d1c5b5a50",
+      "source_sha256": "fc0c69b302640f6da6d99e03a7e265dbcff0809c6657f399fd94945d1c5b5a50"
+    },
+    "engine/tests/test_propose_burst_collision.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "2f96b725da83169739ccb5a493db28a6f8840aca6c8a55c3b44f345ce768d2c9",
+      "source_sha256": "2f96b725da83169739ccb5a493db28a6f8840aca6c8a55c3b44f345ce768d2c9"
+    },
+    "engine/tests/test_propose_node_staging.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "671280581499afeaf39467daa6919a627a77febec1ae1487d1610cdb0078887e",
+      "source_sha256": "671280581499afeaf39467daa6919a627a77febec1ae1487d1610cdb0078887e"
+    },
+    "engine/tests/test_reasoner.py": {
+      "adaptation": "Synthetic privacy fixtures and configuration regression adaptations.",
+      "candidate_sha256": "a71f04fdb033cae5c90939accffd5862165166870826288679fac75299163ce7",
+      "source_sha256": "05416d9274978ece82062b4ae162d74588700567135be19a4569141c3ace0664"
+    },
+    "engine/tests/test_restricted_artifacts.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "1ada62257136b335593a9b52c8507781eb566e7de0b76d78d79ee2931d2160a4",
+      "source_sha256": "1ada62257136b335593a9b52c8507781eb566e7de0b76d78d79ee2931d2160a4"
+    },
+    "engine/tests/test_retrieval_eval.py": {
+      "adaptation": "Synthetic privacy fixtures and configuration regression adaptations.",
+      "candidate_sha256": "8e2da160535f0a418eecd77531eb7ce3cb26920fb1e739155690865303243423",
+      "source_sha256": "1cae39c1dc97c65e471f77472a9e7eeaa76370cb71cc53e3cc486631edaf7fac"
+    },
+    "engine/tests/test_retrieval_v2.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "a492a566ad845add603d97e3783249b74a35fe59e35465568bf61c44ce4a6d1e",
+      "source_sha256": "a492a566ad845add603d97e3783249b74a35fe59e35465568bf61c44ce4a6d1e"
+    },
+    "engine/tests/test_semantic_repair.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "a267713fb9f4d5c7526b97d45ff35fd78ad60d535d63a7267115d15eaab0510c",
+      "source_sha256": "a267713fb9f4d5c7526b97d45ff35fd78ad60d535d63a7267115d15eaab0510c"
+    },
+    "engine/tests/test_semantic_verde.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "d6b215d601baf1112697b7b09d51786b2cb20ba4c2c844e5e0fb0db81ed5f523",
+      "source_sha256": "d6b215d601baf1112697b7b09d51786b2cb20ba4c2c844e5e0fb0db81ed5f523"
+    },
+    "engine/tests/test_session_harvest_cache.py": {
+      "adaptation": "Synthetic privacy fixtures and configuration regression adaptations.",
+      "candidate_sha256": "5df59738de258dce6dea5dcfcf1fbadf33e6b3287234edf710eee23592ee30ed",
+      "source_sha256": "3b4792e1ff5e38d582844ba8867f662c0a125054e800d17f92cba747f247fd7a"
+    },
+    "engine/tests/test_session_harvester.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "108e904bec71936d297bfdb09af46b4fc4dd9bb63e529041a25b69c5b74107a7",
+      "source_sha256": "108e904bec71936d297bfdb09af46b4fc4dd9bb63e529041a25b69c5b74107a7"
+    },
+    "engine/tests/test_session_log_demotion.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "1f062d83f1cda350a80696920146378962096a0a4d1da71e132b36aa057a25b8",
+      "source_sha256": "1f062d83f1cda350a80696920146378962096a0a4d1da71e132b36aa057a25b8"
+    },
+    "engine/tests/test_session_marker_real_paths.py": {
+      "adaptation": "Synthetic privacy fixtures and configuration regression adaptations.",
+      "candidate_sha256": "86148e0f557968ceff8a2d38c8df9419d44d6547e1ae109110bb8f76eb97ab30",
+      "source_sha256": "6d1d292b6f6fc4adf1d426191c12068a8978f783a2d706a1156a1cc40fb7407f"
+    },
+    "engine/tests/test_should_skip_path.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "99d6ed95612260b336dfcbf78656e0ddbef324e5232af99d33d93b8c9f2ae1cb",
+      "source_sha256": "99d6ed95612260b336dfcbf78656e0ddbef324e5232af99d33d93b8c9f2ae1cb"
+    },
+    "engine/tests/test_skiplist_gc_safety.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "bf787defdf8daaf0ff62baba4f8ceb5ed00b10a927d10f85319cc140c0558e14",
+      "source_sha256": "bf787defdf8daaf0ff62baba4f8ceb5ed00b10a927d10f85319cc140c0558e14"
+    },
+    "engine/tests/test_source_integrity.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "1617a4a26184eb605f97530817b92ce89149ed6c3f717bcb418388b39ed91aba",
+      "source_sha256": "1617a4a26184eb605f97530817b92ce89149ed6c3f717bcb418388b39ed91aba"
+    },
+    "engine/tests/test_stale_skiplisted_gc.py": {
+      "adaptation": "Synthetic privacy fixtures and configuration regression adaptations.",
+      "candidate_sha256": "4aa4cd55033f99a3a6a323acef467e4bfa04d7aada05b49494f0543b05207fd6",
+      "source_sha256": "f75e890b9147bca6c66f734fbde4dcbc2e643576141ce861c641b125ebf4d6f0"
+    },
+    "engine/tests/test_temporal_validity.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "3f2e0dd654400756f968cfc22a5f375c39c586f5d0b7b63a30cfee5dc4670141",
+      "source_sha256": "3f2e0dd654400756f968cfc22a5f375c39c586f5d0b7b63a30cfee5dc4670141"
+    },
+    "engine/tests/test_title_twin_dedup.py": {
+      "adaptation": "Synthetic privacy fixtures and configuration regression adaptations.",
+      "candidate_sha256": "1848d7b564d9cfdc114893815ffa8dd2bc3b9a8cfc78b2d2a4e50824a2212e4b",
+      "source_sha256": "e7ecef15e170e862b7b57e9c712a659ce76a1e893a4d4133d26a98aa25e82fc1"
+    },
+    "engine/tests/test_twin_title_dedup.py": {
+      "adaptation": "Synthetic privacy fixtures and configuration regression adaptations.",
+      "candidate_sha256": "4853e09b422e3d83abb52d9152b6431272ff654fbe669ab8d20c283e4d86ed06",
+      "source_sha256": "09e74659656f4f66e96b31137888be3072e457365d5a2e96bfd48c023975d131"
+    },
+    "engine/tests/test_two_floor_confidence.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "73353c609301a2a01d15d0e840f8f36767252c8e91caac58ad8f924523de4ee2",
+      "source_sha256": "73353c609301a2a01d15d0e840f8f36767252c8e91caac58ad8f924523de4ee2"
+    },
+    "engine/tests/test_validity_pass.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "89811145ec2fbb343dda34bd6cdee4670c07cffe843dbf74211f968b532f2a70",
+      "source_sha256": "89811145ec2fbb343dda34bd6cdee4670c07cffe843dbf74211f968b532f2a70"
+    },
+    "engine/tests/test_vega_corpus.py": {
+      "adaptation": "Synthetic privacy fixtures and configuration regression adaptations.",
+      "candidate_sha256": "e98aec963f64b922ff6a89cf9589dd632ac793babbcd47b74f829122558f4637",
+      "source_sha256": "99def4ca917b6aa4646620a7301ae038350f4162cc269ddf89cc9b733baed911"
+    },
+    "engine/tests/test_vega_corpus_index.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "e92bac4c2ce876d90560088d0b02ed4a0438948a594fe77de245a3fb8d7741ba",
+      "source_sha256": "e92bac4c2ce876d90560088d0b02ed4a0438948a594fe77de245a3fb8d7741ba"
+    },
+    "engine/tests/test_vega_index.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "0f0428c49417d1e61ea8269e0301bb292da4f03312ddea3f8dad40e7a43a140d",
+      "source_sha256": "0f0428c49417d1e61ea8269e0301bb292da4f03312ddea3f8dad40e7a43a140d"
+    },
+    "engine/tests/test_vega_query.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "108b93f77e88ea7b7f5311584c20ccd1324c45752d9a4d0768ca166de16ccb0a",
+      "source_sha256": "108b93f77e88ea7b7f5311584c20ccd1324c45752d9a4d0768ca166de16ccb0a"
+    },
+    "engine/tests/test_vega_scan_cache.py": {
+      "adaptation": "Synthetic privacy fixtures and configuration regression adaptations.",
+      "candidate_sha256": "2b9f2a177eb45b3f66a17622d4953533c486a62a07bcac724136a115e69d4eb7",
+      "source_sha256": "833b3de52b6667ae0510af96c76ff9d2072085192bee5754d3d41d530b56bb14"
+    },
+    "engine/tests/test_vega_sqlite_concurrency.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "c9a5993bed094647c0f035c388d0e45169cbb20c64c7fe04a2fd07a64c52665e",
+      "source_sha256": "c9a5993bed094647c0f035c388d0e45169cbb20c64c7fe04a2fd07a64c52665e"
+    },
+    "engine/tests/test_walker_robustness.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "4d92272de9ad19a3af359766760c60a0953fd8b01ac55ad2af57e735673e9200",
+      "source_sha256": "4d92272de9ad19a3af359766760c60a0953fd8b01ac55ad2af57e735673e9200"
+    },
+    "engine/util.py": {
+      "adaptation": "work-root adaptation and documentation privacy editing",
+      "candidate_sha256": "70f58afab1ac858aa11cd8cb619345919a30ca9eb69e6bb9900c099b94d2473c",
+      "source_sha256": "50b292f26defc37ed6df629043cdf4f7882ba6b61a94ceb9fc74829d561148bb"
+    },
+    "engine/validator.py": {
+      "adaptation": "configuration, portable command or documentation privacy adaptation",
+      "candidate_sha256": "3900ce9a5ca3eb05005574cbd7614dbefbd4cd3c3a9abf53437217340c47bda7",
+      "source_sha256": "ebd565fc211d49c6231d6f42765d956df8f67889935799303cf2c6cfdce8e858"
+    },
+    "engine/vector_seed.py": {
+      "adaptation": "optional dependency and local model adaptation",
+      "candidate_sha256": "3938bffa01de8526f12635c814d57d2cd1ecf5eba50d77426bef159e526158e7",
+      "source_sha256": "88476ed8361b3500c9e423d3846569e1532296e47de4bdad900bdd1ed6c3bbdc"
+    },
+    "engine/vega_corpus.py": {
+      "adaptation": "Private embedded source quotes, digests and rules externalized; generic topic descriptions and invented examples.",
+      "candidate_sha256": "dbf1cfa8e8474ce0ac127699437ca550c4df758c489f72359ec1e2b590129315",
+      "source_sha256": "e9112c5a0391e84399f38632261b0c8443795cfcc5afe92835a254ff72a99c61"
+    },
+    "engine/vega_corpus_index.py": {
+      "adaptation": "Caller-owned rule configuration participates in scan identity, ordinary synchronization and prepared-plan revalidation.",
+      "candidate_sha256": "01511c2a239a1e168914a9c428f7a9983d53f4f7e9a18ab5dd969f5de03ecfe8",
+      "source_sha256": "f2789f6712b4adbe68b6d31b5c5f1ef626ec18e2944099d986e8ca2b333a79d4"
+    },
+    "engine/vega_index.py": {
+      "adaptation": "Explicit optional rule configuration propagated through ordinary synchronization and command paths; private deployment text removed.",
+      "candidate_sha256": "ee440c614e9d7ac151639cdf1b15b42ab2bc0603c31ba63c730f3c29dbc46db2",
+      "source_sha256": "cef5f57dc05fd47d32340355f7692ef4172f5acf4547aaed9e92c31723fc37d9"
+    },
+    "engine/vega_query.py": {
+      "adaptation": "Query freshness uses the same exact caller-owned rules version as the corpus writer.",
+      "candidate_sha256": "df7cd5644d285a561f184827adbda37c3322d89a6a6d01524058a66f1672fd50",
+      "source_sha256": "4a0bdfec550f7e0fa3cf7458bfcabfb0663857dcd0c150746d5da9bafad46e9b"
+    },
+    "engine/walker.py": {
+      "adaptation": "configuration, portable command or documentation privacy adaptation",
+      "candidate_sha256": "e556afba025e04b0db45de814017930fd9a7dce3c5bcc99eecb201ba7343bf10",
+      "source_sha256": "a1b3dccd1f8982c94bcdeae8638a4cc615435ae4a60afb040c2f0aa2bfc45523"
+    },
+    "engine/watch.py": {
+      "adaptation": "unchanged",
+      "candidate_sha256": "143e83b195840ac669ac07bc56f5e75c0c07994685976875311bcc032fbd2c2d",
+      "source_sha256": "143e83b195840ac669ac07bc56f5e75c0c07994685976875311bcc032fbd2c2d"
+    }
+  },
+  "note": "Point-in-time source comparison, not a loaded-runtime, privacy, rights, or feature-parity attestation.",
+  "reference_manifest_sha256": "2907a88ab477bd255acbbd9d6d1594a466dccf2fe0a78e68696eec01ab442fbf"
+}

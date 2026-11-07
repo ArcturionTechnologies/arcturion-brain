@@ -1,0 +1,9 @@
+{
+  "excluded_agents": {"private-agent": "Example exclusion"},
+  "skip_path_fragments": ["private-directory/"],
+  "privacy_topic_pattern": "example-sensitive-topic",
+  "privacy_person_pattern": "example-person",
+  "privacy_path_marker": "example-private-path",
+  "restricted_recovery_root": "/example/work/restricted",
+  "legacy_protected_root": "/example/work/legacy-restricted"
+}
