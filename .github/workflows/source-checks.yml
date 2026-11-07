@@ -24,7 +24,8 @@ jobs:
         with:
           python-version: ${{ matrix.python }}
       - name: Install the core YAML dependency
-        run: python -m pip install --only-binary=:all: -r requirements-core.txt
+        run: |
+          python -m pip install --only-binary=:all: -r requirements-core.txt
       - name: Check source syntax
         run: python -m compileall -q engine brain_http_main.py guarded_proof.py
       - name: Exercise the actual engine with invented records
