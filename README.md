@@ -10,6 +10,14 @@ Arcturion Brain turns a collection of files into a navigable knowledge graph. It
 
 Built within the [Arcturion constellation](https://github.com/ArcturionTechnologies/constellation-architecture), the Brain connects durable knowledge and working memory across agent workspaces. People can follow the same references, inspect the source material and understand why a record was retrieved.
 
+## Explore the interactive demonstration
+
+[Open the Arcturion Brain constellation →](https://arcturiontechnologies.github.io/arcturion-brain/)
+
+Explore a fictional observatory project as a night sky: each record is a star and each labelled thread is a directed relationship. Ask one of three guided questions and watch it trace a constellation into a small, source-linked context pack. Every record was invented for this exhibit. The static demo runs entirely in your browser, with no connection to our private Brain.
+
+Its deterministic teaching model illustrates graph traversal, changing decisions and an estimated node-text budget. It does not execute the Python retrieval engine, call a model or demonstrate measured retrieval quality.
+
 ## Context has structure
 
 A workflow does not stand alone. It depends on a configuration, has a steward, follows a decision and may have evidence that supports—or changes—that decision.

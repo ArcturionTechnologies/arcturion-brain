@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'none'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#04050a">
+  <meta name="description" content="Explore the Arcturion Brain as a night sky of invented records, and watch a question trace a constellation through labelled relationships. Runs entirely in your browser.">
+  <title>The Arcturion Brain · Invented demonstration</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./data.js" defer></script>
+  <script src="./model.js" defer></script>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#panel">Skip to the records</a>
+  <div class="app" id="app">
+
+    <section class="stage" id="stage" aria-label="The Arcturion Brain as a sky of constellations">
+      <canvas id="sky" tabindex="0" role="img" aria-describedby="hint"
+        aria-label="A slowly turning galaxy of 32 invented records joined by labelled relationships. Use the All records tab to reach every record from the keyboard."></canvas>
+      <div class="veil" aria-hidden="true"></div>
+
+      <div class="mid" id="mid">
+        <div class="stepper" id="stepper" hidden>
+          <ol class="steps">
+            <li id="step1"><span class="num">1</span>Find a starting point</li>
+            <li id="step2"><span class="num">2</span>Follow the threads</li>
+            <li id="step3"><span class="num">3</span>Keep the constellation</li>
+          </ol>
+          <p class="stepline" id="stepline" aria-live="polite"></p>
+          <button type="button" class="ghost" id="clear-thought">Clear</button>
+        </div>
+
+        <p class="hint" id="hint">Drag to turn · scroll or pinch to zoom · click a star or a thread</p>
+
+        <div class="dock" id="dock">
+          <div class="legend" role="group" aria-label="Kinds of record. Choose one to isolate it.">
+            <span class="legend-title">Stars</span>
+            <span class="chips" id="family-chips"></span>
+          </div>
+          <div class="legend" role="group" aria-label="Kinds of relationship. Choose one to isolate it.">
+            <span class="legend-title">Threads</span>
+            <span class="chips" id="pred-chips"></span>
+          </div>
+          <div class="legend tools" role="group" aria-label="View">
+            <button type="button" class="chip" id="toggle-labels" aria-pressed="true">Labels</button>
+            <button type="button" class="chip" id="toggle-drift" aria-pressed="true">Drift</button>
+            <button type="button" class="chip" id="recenter">Recenter</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="tip" id="tip" role="presentation" hidden></div>
+    </section>
+
+    <aside class="rail rail-left" aria-label="Ask the Brain">
+      <header class="brand">
+        <span class="wordmark"><span class="mark" aria-hidden="true">✳</span>ARCTURION<span class="wordmark-sub">/ THE BRAIN</span></span>
+        <span class="badge">Invented demo</span>
+      </header>
+
+      <h1>The <em>Arcturion</em> Brain</h1>
+      <p class="lede">In this invented example, every note, decision and piece of code is a star. The named threads between them draw the constellations the Brain follows to an answer.</p>
+
+      <section class="block" aria-labelledby="ask-title">
+        <h2 id="ask-title">Ask it a question</h2>
+        <p class="sub">Pick one and watch a constellation form.</p>
+        <div class="scenarios" id="scenarios"></div>
+        <form class="askform" id="askform" autocomplete="off">
+          <label class="visually-hidden" for="ask-input">Ask your own question about this invented project</label>
+          <input id="ask-input" type="text" maxlength="120" placeholder="Or ask your own: rollback, schema, queue…">
+          <button type="submit">Ask</button>
+        </form>
+        <p class="note" id="ask-note" aria-live="polite" hidden></p>
+      </section>
+
+      <section class="block" aria-labelledby="tune-title">
+        <h2 id="tune-title">Tune the thought</h2>
+        <label class="control" for="budget">
+          <span class="control-row"><span>How much it can carry</span><output id="budget-out" for="budget">800 tokens</output></span>
+          <input id="budget" type="range" min="150" max="1600" step="50" value="800">
+        </label>
+        <label class="control" for="radius">
+          <span class="control-row"><span>How far it follows threads</span><output id="radius-out" for="radius">2 steps</output></span>
+          <input id="radius" type="range" min="1" max="3" step="1" value="2">
+        </label>
+        <label class="control" for="owner">
+          <span class="control-row"><span>Who is asking</span></span>
+          <select id="owner"><option value="">Anyone</option></select>
+          <span class="control-help">The asker's own records rank a little higher.</span>
+        </label>
+      </section>
+
+      <footer class="foot">
+        <p id="provenance">Every record here is invented. Nothing private is loaded.</p>
+        <p>Runs entirely in your browser: no accounts, no tracking, no network calls. A small teaching model shows the idea; it is not the production engine.</p>
+        <p><a href="https://github.com/ArcturionTechnologies/arcturion-brain" rel="noopener noreferrer">Read the source on GitHub</a></p>
+      </footer>
+    </aside>
+
+    <aside class="rail rail-right" id="panel" aria-label="Inspector">
+      <div class="tabs" role="tablist" aria-label="Inspector views">
+        <button type="button" role="tab" id="tab-record" aria-controls="view-record" aria-selected="true">Record</button>
+        <button type="button" role="tab" id="tab-pack" aria-controls="view-pack" aria-selected="false" tabindex="-1">Context pack</button>
+        <button type="button" role="tab" id="tab-all" aria-controls="view-all" aria-selected="false" tabindex="-1">All records</button>
+      </div>
+
+      <div class="view" id="view-record" role="tabpanel" aria-labelledby="tab-record" tabindex="0">
+        <div id="record-intro">
+          <p class="eyebrow">How to read the constellation</p>
+          <h3>Pick a star.</h3>
+          <ul class="reading">
+            <li><span class="glyph glyph-star" aria-hidden="true"></span><span><b>A star is one record.</b> A document, a piece of code, an automation, a concept or an agent role.</span></li>
+            <li><span class="glyph glyph-thread" aria-hidden="true"></span><span><b>A thread is a relationship.</b> It has a name and a direction, like <i>depends on</i> or <i>supersedes</i>. The moving spark shows which way it points.</span></li>
+            <li><span class="glyph glyph-thought" aria-hidden="true"></span><span><b>A question draws a constellation.</b> It lights a few stars, follows their threads outward, then keeps only what fits a small budget. That constellation is the context an AI agent receives.</span></li>
+          </ul>
+          <p class="quiet">Click any star or thread to open it. Every record in this sky was invented for the exhibit.</p>
+        </div>
+        <div id="record-body" hidden></div>
+      </div>
+
+      <div class="view" id="view-pack" role="tabpanel" aria-labelledby="tab-pack" tabindex="0" hidden>
+        <div id="pack-body">
+          <p class="eyebrow">Context pack</p>
+          <h3>Nothing asked yet.</h3>
+          <p class="quiet">Ask a question on the left. The constellation of records the Brain would hand to an agent appears here, each with the trail of relationships that led to it.</p>
+        </div>
+      </div>
+
+      <div class="view" id="view-all" role="tabpanel" aria-labelledby="tab-all" tabindex="0" hidden>
+        <label class="visually-hidden" for="filter">Filter records by title</label>
+        <input id="filter" type="search" placeholder="Filter the 32 records…">
+        <div id="all-body"></div>
+      </div>
+    </aside>
+  </div>
+
+  <noscript><p class="noscript">This exhibit draws an interactive galaxy with JavaScript. Every record in it is invented; nothing private is loaded.</p></noscript>
+</body>
+</html>
